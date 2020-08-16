@@ -1,0 +1,4 @@
+on property:vendor.sys.mobicoredaemon.enable=true
+    mkdir /dev/socket/vaultkeeper 0770 system system
+    start vaultkeeper
+    start vaultkeeper_hal

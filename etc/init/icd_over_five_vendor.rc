@@ -1,0 +1,11 @@
+# iof_vendor
+service iof_vendor /vendor/bin/iof_vendor
+    class main
+    user system
+    group system log
+    disabled
+    oneshot
+
+on early-fs
+# start iof before vold
+    start iof_vendor
